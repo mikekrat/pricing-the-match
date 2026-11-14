@@ -1,10 +1,10 @@
-# odds-lab: User guide to the app
+# pricing-the-match: User guide to the app
 
 14 November 2026
 
 ## What we built
 
-odds-lab shows how a betting operator prices a football match and what its profit depends on. It was built in five steps on 2,280 Premier League matches (seasons 2020/21 to 2025/26, from football-data.co.uk). The first five seasons train the model and 2025/26 is held out for testing.
+pricing-the-match shows how a betting operator prices a football match and what its profit depends on. It was built in five steps on 2,280 Premier League matches (seasons 2020/21 to 2025/26, from football-data.co.uk). The first five seasons train the model and 2025/26 is held out for testing.
 
 | Step | Question | What the code does | What we found |
 | --- | --- | --- | --- |

@@ -1,4 +1,4 @@
-"""odds-lab: how a betting operator prices a match and what drives its profit.
+"""pricing-the-match: how a betting operator prices a match and what drives its profit.
 
 Three layers, each explained step by step in notebooks/:
   1. probabilities  - Elo ratings and a logistic model, scored against the bookmaker

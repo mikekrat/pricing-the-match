@@ -1,4 +1,4 @@
-"""odds-lab web app.  Run with:  python -m streamlit run app.py"""
+"""pricing-the-match web app.  Run with:  python -m streamlit run app.py"""
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -6,7 +6,7 @@ import streamlit as st
 
 import oddslab as ol
 
-st.set_page_config(page_title="odds-lab", layout="wide")
+st.set_page_config(page_title="pricing-the-match", layout="wide")
 
 
 @st.cache_data(show_spinner="Tuning the model on the training seasons (about ten seconds, once)...")
@@ -64,7 +64,7 @@ D = load()
 test = D["test"]
 labels = [f"{d:%d %b %Y}  {h} v {a}" for d, h, a in zip(test["Date"], test["HomeTeam"], test["AwayTeam"])]
 
-st.title("odds-lab")
+st.title("pricing-the-match")
 st.caption("How a betting operator prices a football match, and what its profit depends on.")
 if not D["is_real"]:
     st.warning("No season files found in data/real, so this is running on SYNTHETIC matches. "
