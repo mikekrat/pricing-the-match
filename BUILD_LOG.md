@@ -8,7 +8,7 @@ The code was written with Claude (Anthropic) in a chat session over 13 November 
 For each step Claude wrote a notebook and tested it on synthetic data; I ran it on the real season files in
 Google Colab and sent the outputs back before the next step was started.
 
-- **Written by the AI:** the functions in `oddslab.py`, the notebooks, the tests and `app.py`, including the
+- **Written by the AI:** the functions in `pricing.py`, the notebooks, the tests and `app.py`, including the
   step 4 improvements (Elo season rules, tuning, extra features, walk-forward testing, the goals model)
   and the step 5 moving-price books.
   I chose which improvements to make from a list the AI proposed.

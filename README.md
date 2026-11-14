@@ -8,11 +8,11 @@ with the 2025/26 season held out for testing.
 
 | Step | Question | Where |
 |---|---|---|
-| 1 | Can past results be turned into match probabilities? | `notebooks/odds_lab_step1.ipynb` |
-| 2 | How do probabilities become odds with a margin? | `notebooks/odds_lab_step2.ipynb` |
-| 3 | What does the operator's profit depend on? | `notebooks/odds_lab_step3.ipynb` |
-| 4 | Which improvements to the model are worth making? | `notebooks/odds_lab_step4.ipynb` |
-| 5 | What changes when prices move as money arrives? | `notebooks/odds_lab_step5.ipynb` |
+| 1 | Can past results be turned into match probabilities? | `notebooks/pricing_step1.ipynb` |
+| 2 | How do probabilities become odds with a margin? | `notebooks/pricing_step2.ipynb` |
+| 3 | What does the operator's profit depend on? | `notebooks/pricing_step3.ipynb` |
+| 4 | Which improvements to the model are worth making? | `notebooks/pricing_step4.ipynb` |
+| 5 | What changes when prices move as money arrives? | `notebooks/pricing_step5.ipynb` |
 | App | All five steps with the levers as sliders | `app.py` |
 | Guide | What every tab, slider and number in the app means | `docs/guide_en.md` (English), `docs/guide_el.md` (Greek) |
 
@@ -171,8 +171,24 @@ and the shape of the curves are the result.
     python -m pytest -q          # 42 tests
     python -m streamlit run app.py
 
-Put the season files in `data/real` (see the note there). Without them the app runs on synthetic matches
-and says so.
+Run the commands from the project folder (the one that holds `app.py`). Without the season files the app
+runs on synthetic matches and says so.
+
+### Paths
+
+Nothing in the project uses an absolute path, so it runs from wherever you put it.
+
+- **The app and the tests** read `data/real`, relative to the folder you start them from. Start them from
+  the project folder.
+- **The notebooks** look in `data/real` and then `../data/real`, relative to the folder the notebook runs
+  in. Opened from `notebooks/` they find the project's data without any change.
+- **Data somewhere else.** Add your folder to the `CANDIDATES` list in the notebook's data cell, as a path
+  relative to where the notebook runs, for example `Path("../../my-data")`.
+- **Google Colab.** Either create a `data/real` folder in the session's file panel and upload the six CSVs
+  there, or mount Google Drive with `from google.colab import drive; drive.mount("drive")` and add
+  `Path("drive/MyDrive/<your folder>")` to `CANDIDATES`.
+- **Getting the data yourself.** Download one `E0.csv` per season from football-data.co.uk and rename them
+  so they sort in time order (`E0_2020.csv` to `E0_2025.csv`). The last file by name is the test season.
 
 ## How it was built
 

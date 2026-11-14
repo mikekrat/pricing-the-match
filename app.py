@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-import oddslab as ol
+import pricing as ol
 
 st.set_page_config(page_title="pricing-the-match", layout="wide")
 

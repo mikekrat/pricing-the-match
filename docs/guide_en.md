@@ -14,7 +14,7 @@ pricing-the-match shows how a betting operator prices a football match and what 
 
 The conclusion that ties the first three steps together: margin, stake limits and model accuracy are substitutes. A weak model survives on a wide margin and low limits. A strong model can offer better prices and take bigger bets.
 
-The app (`app.py`) puts all the steps on one page, with the levers as sliders. It is online at [pricing-the-match.streamlit.app](https://pricing-the-match.streamlit.app) and the code is at [github.com/mikekrat/pricing-the-match](https://github.com/mikekrat/pricing-the-match). The same calculations live in `oddslab.py` and are explained in detail in the five notebooks.
+The app (`app.py`) puts all the steps on one page, with the levers as sliders. It is online at [pricing-the-match.streamlit.app](https://pricing-the-match.streamlit.app) and the code is at [github.com/mikekrat/pricing-the-match](https://github.com/mikekrat/pricing-the-match). The same calculations live in `pricing.py` and are explained in detail in the five notebooks.
 
 ## What was added in version 2
 
@@ -292,7 +292,7 @@ The app is a tool for seeing relationships between variables, not for forecastin
 - **Goals are treated as independent.** The goals model counts each team's goals as a separate Poisson distribution. Real scores have slightly more draws and low scores. On over/under the model does not beat the base rates.
 - **What is not modelled.** In-play betting, accumulators, and customers who are neither casual nor sharp.
 
-Two parameters have no slider and change only in the code, in the `BASE` dictionary of `oddslab.py`: `casual_noise` (how unevenly casual money lands, 0.3) and `min_edge` (the smallest edge at which a sharp bets, 2%).
+Two parameters have no slider and change only in the code, in the `BASE` dictionary of `pricing.py`: `casual_noise` (how unevenly casual money lands, 0.3) and `min_edge` (the smallest edge at which a sharp bets, 2%).
 
 ## What to improve
 

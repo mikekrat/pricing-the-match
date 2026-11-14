@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-import oddslab as ol
+import pricing as ol
 
 P = np.array([[0.50, 0.30, 0.20], [0.80, 0.15, 0.05], [0.34, 0.33, 0.33]])
 
