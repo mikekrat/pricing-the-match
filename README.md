@@ -89,6 +89,10 @@ that model (v2) scores worse than step 1 (v1), and over four walk-forward season
 
 ("Gap" is the log-loss distance between base rates and Bet365. v2 wins two seasons of four.)
 
+**The extra features were rejected.** On the training seasons plain Elo had a log loss of 0.9743. Adding
+goal difference (0.9753), form (0.9758) or both (0.9760) made it worse, because Elo already summarises
+past results. The v2 model therefore uses the tuned Elo rating alone.
+
 **It is still slightly safer to price with.** On 2025/26, at a 6% margin:
 
 | Model | Log loss | Prices a sharp can beat | Profit, limit 200 | Profit, limit 1,000 |
