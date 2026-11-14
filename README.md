@@ -14,6 +14,7 @@ with the 2025/26 season held out for testing.
 | 4 | Which improvements to the model are worth making? | `notebooks/odds_lab_step4.ipynb` |
 | 5 | What changes when prices move as money arrives? | `notebooks/odds_lab_step5.ipynb` |
 | App | All five steps with the levers as sliders | `app.py` |
+| Guide | What every tab, slider and number in the app means | `docs/guide_en.md` (English), `docs/guide_el.md` (Greek) |
 
 ## Findings
 
