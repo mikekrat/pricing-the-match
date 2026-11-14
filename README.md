@@ -4,6 +4,8 @@ How a betting operator prices a football match, and what its profit depends on.
 Built in five steps on six Premier League seasons (2020/21 to 2025/26, 2,280 matches, football-data.co.uk),
 with the 2025/26 season held out for testing.
 
+**Try the app:** https://pricing-the-match.streamlit.app
+
 | Step | Question | Where |
 |---|---|---|
 | 1 | Can past results be turned into match probabilities? | `notebooks/odds_lab_step1.ipynb` |
